@@ -92,9 +92,23 @@ Procure por `TROCAR` no `index.html`:
 - [ ] Conferir os preços dos 5 serviços (hoje: R$ 45 / 35 / 60 / 50 / 120)
 - [ ] O depoimento assinado por "Lucas M." é fictício — troque por um
       review real ou remova a seção
-- [ ] **Sem imagem de prévia ao compartilhar.** A página não tem tags
-      Open Graph, então WhatsApp e Instagram mostram só o título e o texto,
-      sem foto. Para ter foto é preciso saber a URL final do site.
+- [x] ~~Prévia ao compartilhar~~ — card 1200 × 630 em
+      `assets/img/og.jpg` + tags Open Graph
+
+## Publicação
+
+O site está em **https://cortezz.vercel.app** (Vercel, deploy automático a
+cada push na `main`).
+
+⚠️ **As tags Open Graph têm o endereço escrito por extenso** no `<head>` do
+`index.html` — `og:url`, `og:image`, `twitter:image` e o `<link rel=canonical>`.
+Prévia de link não aceita caminho relativo. **Se o site mudar de endereço
+(domínio próprio, por exemplo), troque esses quatro** ou o WhatsApp passa a
+mostrar um retângulo sem imagem.
+
+Para regerar o card de prévia, o método foi: montar um HTML de 1200 × 630 com
+a marca sobre uma foto tratada, abrir no navegador e capturar a tela. Assim a
+fonte Cinzel sai igual à do site, o que nenhum gerador de imagem entrega.
 
 ## Notas de manutenção
 
