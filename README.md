@@ -92,7 +92,9 @@ Procure por `TROCAR` no `index.html`:
 - [ ] Conferir os preços dos 5 serviços (hoje: R$ 45 / 35 / 60 / 50 / 120)
 - [ ] O depoimento assinado por "Lucas M." é fictício — troque por um
       review real ou remova a seção
-- [ ] O texto "Aberto agora · fecha às 20h" no hero é fixo, não calculado
+- [ ] **Sem imagem de prévia ao compartilhar.** A página não tem tags
+      Open Graph, então WhatsApp e Instagram mostram só o título e o texto,
+      sem foto. Para ter foto é preciso saber a URL final do site.
 
 ## Notas de manutenção
 

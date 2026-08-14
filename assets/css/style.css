@@ -165,10 +165,10 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .hero__copy{color:var(--smoke);font-size:15px;margin-top:14px;max-width:420px;margin-left:auto;margin-right:auto}
 
 /* ---- HERO · CAMADA DE VÍDEO ----
-   O vídeo passa pelo MESMO tratamento das fotos do resto da página
-   (preto e branco + véu dourado em mix-blend-mode:color). Ele é
-   atmosfera, não fotografia: fica bem escuro, atrás da tipografia,
-   e se dissolve no preto antes do texto de leitura começar. */
+   Aqui o vídeo é atmosfera, não fotografia: preto e branco com véu
+   dourado, bem escuro, atrás da tipografia, dissolvendo no preto antes
+   do texto de leitura começar. O tratamento existe para o wordmark ter
+   contraste — por isso ele fica, mesmo com as fotos em cor natural. */
 .hero{position:relative}
 .hero > *:not(.hero__media){position:relative;z-index:1}
 
@@ -202,15 +202,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
       rgba(11,11,12,.90) 60%,
       var(--ink) 72%);
 }
-
-.status{
-  display:inline-flex;align-items:center;gap:9px;margin-top:22px;
-  font-family:var(--f-ui);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#CFC8BB;
-  border:1px solid var(--line);border-radius:100px;padding:8px 16px;
-}
-.status .live{width:7px;height:7px;border-radius:50%;background:var(--gold);position:relative}
-.status .live::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--gold);opacity:.5;animation:pulse 2.2s ease-out infinite}
-@keyframes pulse{0%{transform:scale(.6);opacity:.7}100%{transform:scale(1.8);opacity:0}}
 
 /* botões */
 .cta-stack{display:flex;flex-direction:column;gap:12px;margin-top:26px}
@@ -259,13 +250,12 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 .arrows button:focus-visible{outline:2px solid var(--cream);outline-offset:2px}
 .arrows svg{width:16px;height:16px}
 
-/* ---- moldura de foto com tratamento duotone dourado ---- */
+/* ---- moldura de foto ----
+   As fotos de serviços e galeria saem em cor natural, sem filtro: o
+   cliente precisa ver o corte como ele é. Quem ainda leva tratamento é
+   só o vídeo do hero, e por outro motivo — lá ele é fundo de texto. */
 .frame{position:relative;background:var(--ink-2);overflow:hidden;border:1px solid var(--line-soft)}
-.frame img{
-  width:100%;height:100%;object-fit:cover;
-  filter:grayscale(1) contrast(1.05) brightness(.82) sepia(.18);
-}
-.frame::after{content:"";position:absolute;inset:0;background:rgba(198,161,91,.16);mix-blend-mode:color;pointer-events:none}
+.frame img{width:100%;height:100%;object-fit:cover}
 .frame__fallback{
   position:absolute;inset:0;display:grid;place-items:center;background:var(--ink-2);
   z-index:-1;

@@ -54,6 +54,9 @@ Para resolver, mande os **nomes reais + foto de cada um**. Aí é só trocar a
 | Equipe   | 3:4       | 600 × 800      |
 | Galeria  | 1:1       | 720 × 720      |
 
-Mande as fotos **coloridas e normais**. O preto e branco com véu dourado é
-aplicado por CSS em `.frame img` — se você já mandar tratada, o efeito é
-aplicado duas vezes e o resultado fica sujo.
+As fotos aparecem em **cor natural**, sem filtro nenhum — o cliente precisa
+ver o corte como ele é. O único material tratado na página é o vídeo do
+hero, e por outro motivo: lá ele é fundo de texto e precisa recuar para o
+wordmark ter contraste.
+
+Ou seja: mande a foto já do jeito que você quer que apareça.
