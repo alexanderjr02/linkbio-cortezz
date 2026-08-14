@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Cortez Barbearia · Corte, Barba e Ritual</title>
+<meta name="description" content="Cortez Barbearia. Corte masculino e feminino, barba na navalha, tratamento e realinhamento capilar. Agende pelo app." />
+
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<!-- ============================================================
+     FONTES
+     Display / wordmark: Cinzel (serifa romana clássica, tipo Trajan)
+     Serifa de apoio:    Cormorant Garamond (frases e citações)
+     UI / rótulos:       Montserrat (ecoa a vitrine da loja)
+     Corpo:              Inter
+============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ESTILOS — ver assets/css/style.css -->
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="locked">
+
+<!-- =========================================================
+     LOADER
+========================================================== -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__razor">
+    <svg viewBox="0 0 420 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M300 104 L108 62" stroke="#F4EEE2" stroke-width="26" stroke-linecap="round"/>
+      <path d="M300 118 L96 146" stroke="#F4EEE2" stroke-width="22" stroke-linecap="round"/>
+      <circle cx="116" cy="143" r="5.5" fill="#0B0B0C"/>
+      <path d="M300 111 C332 108 350 118 350 132 C350 141 344 145 337 143" stroke="#F4EEE2" stroke-width="11" stroke-linecap="round"/>
+      <circle cx="300" cy="111" r="11" fill="#F4EEE2"/>
+      <circle cx="300" cy="111" r="4" fill="#0B0B0C"/>
+    </svg>
+  </div>
+  <div class="loader__word">CORTEZ</div>
+  <div class="loader__edge"></div>
+  <div class="loader__tag">Barbearia</div>
+</div>
+
+<main class="page">
+
+  <!-- =========================================================
+       HERO
+  ========================================================== -->
+  <header class="hero">
+    <!-- Fundo em vídeo. Os src ficam em data-src: nada é baixado até o
+         JS decidir que vale a pena (ver assets/js/main.js). Até lá, e em
+         conexão lenta, o que aparece é o poster. -->
+    <div class="hero__media" aria-hidden="true">
+      <video poster="assets/img/hero-poster.jpg" muted loop playsinline preload="none" tabindex="-1">
+        <source data-src="assets/video/hero.webm" type="video/webm">
+        <source data-src="assets/video/hero.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="hero__mark reveal">
+      <svg viewBox="0 0 420 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M300 104 L108 62" stroke="#F4EEE2" stroke-width="26" stroke-linecap="round"/>
+        <path d="M300 118 L96 146" stroke="#F4EEE2" stroke-width="22" stroke-linecap="round"/>
+        <circle cx="116" cy="143" r="5.5" fill="#0B0B0C"/>
+        <path d="M300 111 C332 108 350 118 350 132 C350 141 344 145 337 143" stroke="#F4EEE2" stroke-width="11" stroke-linecap="round"/>
+        <circle cx="300" cy="111" r="11" fill="#F4EEE2"/>
+        <circle cx="300" cy="111" r="4" fill="#0B0B0C"/>
+      </svg>
+    </div>
+    <h1 class="hero__word reveal">CORTEZ</h1>
+    <div class="divider reveal"><span class="rule"></span><span class="dot"></span><span class="dot mid"></span><span class="dot"></span><span class="rule"></span></div>
+    <p class="hero__sub reveal">Barbearia</p>
+
+    <p class="hero__thesis reveal">Onde cada corte vira assinatura.</p>
+    <p class="hero__copy reveal">Lâmina afiada, mãos precisas e um ambiente pensado para o seu tempo. Aqui o corte deixa de ser rotina e vira ritual.</p>
+
+    <div class="status reveal"><span class="live"></span> Aberto agora · fecha às 20h</div>
+
+    <div class="cta-stack reveal">
+      <!-- TROCAR: link do seu app de agendamento / WhatsApp -->
+      <a class="btn btn--gold" href="#app">Agendar horário</a>
+      <a class="btn btn--ghost" href="#app">Baixar o app</a>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       SERVIÇOS
+  ========================================================== -->
+  <section class="section" id="servicos">
+    <div class="section__head reveal">
+      <p class="eyebrow">O que fazemos</p>
+      <h2 class="section-title">Serviços</h2>
+      <p class="lede">Cinco especialidades, um padrão só: acabamento impecável.</p>
+    </div>
+
+    <div class="carousel reveal">
+      <div class="track" data-carousel="svc">
+
+        <article class="card svc">
+          <div class="frame">
+            <div class="frame__fallback"><svg viewBox="0 0 240 120" fill="#C6A15B"><path d="M118 66 L206 44 C216 41 221 47 216 54 C213 58 208 60 202 61 L120 78 Z"/></svg></div>
+            <img src="assets/img/servicos/corte-masculino.jpg" alt="Barbeiro fazendo o acabamento com máquina no perfil do cliente" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="svc__body">
+            <p class="svc__no">01</p>
+            <h3 class="svc__name">Corte Masculino</h3>
+            <p class="svc__desc">Máquina e tesoura em harmonia. Degradê, social ou clássico, com um acabamento que dura.</p>
+            <div class="svc__foot">
+              <span class="svc__price">a partir de <b>R$ 45</b></span>
+              <a class="svc__book" href="#app">Reservar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card svc">
+          <div class="frame">
+            <div class="frame__fallback"><svg viewBox="0 0 240 120" fill="#C6A15B"><path d="M118 66 L206 44 C216 41 221 47 216 54 C213 58 208 60 202 61 L120 78 Z"/></svg></div>
+            <img src="assets/img/servicos/barba.jpg" alt="Barbeiro trabalhando a barba do cliente reclinado na cadeira" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="svc__body">
+            <p class="svc__no">02</p>
+            <h3 class="svc__name">Barba</h3>
+            <p class="svc__desc">Toalha quente, navalha e desenho preciso. O ritual completo, do vapor ao balm final.</p>
+            <div class="svc__foot">
+              <span class="svc__price">a partir de <b>R$ 35</b></span>
+              <a class="svc__book" href="#app">Reservar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card svc">
+          <div class="frame">
+            <div class="frame__fallback"><svg viewBox="0 0 240 120" fill="#C6A15B"><path d="M118 66 L206 44 C216 41 221 47 216 54 C213 58 208 60 202 61 L120 78 Z"/></svg></div>
+            <img src="assets/img/servicos/corte-feminino.jpg" alt="Escova modelando cabelo longo com escova redonda e secador" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="svc__body">
+            <p class="svc__no">03</p>
+            <h3 class="svc__name">Corte Feminino</h3>
+            <p class="svc__desc">Leitura de rosto e cuidado fio a fio. Cortes que valorizam movimento e personalidade.</p>
+            <div class="svc__foot">
+              <span class="svc__price">a partir de <b>R$ 60</b></span>
+              <a class="svc__book" href="#app">Reservar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card svc">
+          <div class="frame">
+            <div class="frame__fallback"><svg viewBox="0 0 240 120" fill="#C6A15B"><path d="M118 66 L206 44 C216 41 221 47 216 54 C213 58 208 60 202 61 L120 78 Z"/></svg></div>
+            <img src="assets/img/servicos/tratamento-capilar.jpg" alt="Cabelo longo com brilho depois do tratamento" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="svc__body">
+            <p class="svc__no">04</p>
+            <h3 class="svc__name">Tratamento Capilar</h3>
+            <p class="svc__desc">Hidratação e força do couro às pontas. Cabelo saudável é a base de todo bom corte.</p>
+            <div class="svc__foot">
+              <span class="svc__price">a partir de <b>R$ 50</b></span>
+              <a class="svc__book" href="#app">Reservar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card svc">
+          <div class="frame">
+            <div class="frame__fallback"><svg viewBox="0 0 240 120" fill="#C6A15B"><path d="M118 66 L206 44 C216 41 221 47 216 54 C213 58 208 60 202 61 L120 78 Z"/></svg></div>
+            <img src="assets/img/servicos/realinhamento.jpg" alt="Cabelo alinhado e sem volume depois do realinhamento" loading="lazy" onerror="this.style.display='none'">
+          </div>
+          <div class="svc__body">
+            <p class="svc__no">05</p>
+            <h3 class="svc__name">Realinhamento Capilar</h3>
+            <p class="svc__desc">Fios alinhados, movimento natural e brilho por semanas. Sem volume indesejado.</p>
+            <div class="svc__foot">
+              <span class="svc__price">a partir de <b>R$ 120</b></span>
+              <a class="svc__book" href="#app">Reservar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="carousel__nav">
+        <div class="dots" data-dots="svc"></div>
+        <div class="arrows">
+          <button data-prev="svc" aria-label="Serviço anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button data-next="svc" aria-label="Próximo serviço"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       PROFISSIONAIS
+  ========================================================== -->
+  <section class="section" id="equipe">
+    <div class="section__head reveal">
+      <p class="eyebrow">Quem cuida de você</p>
+      <h2 class="section-title">A Equipe</h2>
+      <p class="lede">Mão firme, olho treinado. Escolha com quem marcar.</p>
+    </div>
+
+    <div class="carousel reveal">
+      <div class="track" data-carousel="pro">
+
+        <!-- TROCAR: falta a função e a especialidade de cada um, e a foto
+             (para usar foto, troque a div.pro__monogram por uma <img>). -->
+        <article class="card pro">
+          <div class="frame"><div class="pro__monogram"><span>R</span></div></div>
+          <h3 class="pro__name">Rodrigo Cerqueira</h3>
+          <p class="pro__role">Fundador</p>
+          <a class="pro__link" href="#app">Agendar com Rodrigo</a>
+        </article>
+
+        <article class="card pro">
+          <div class="frame"><div class="pro__monogram"><span>T</span></div></div>
+          <h3 class="pro__name">Thalisson Barbosa</h3>
+          <p class="pro__role">Barbeiro</p>
+          <a class="pro__link" href="#app">Agendar com Thalisson</a>
+        </article>
+
+        <article class="card pro">
+          <div class="frame"><div class="pro__monogram"><span>S</span></div></div>
+          <h3 class="pro__name">Sandra Cerqueira</h3>
+          <p class="pro__role">Cabeleireira</p>
+          <a class="pro__link" href="#app">Agendar com Sandra</a>
+        </article>
+
+      </div>
+      <div class="carousel__nav">
+        <div class="dots" data-dots="pro"></div>
+        <div class="arrows">
+          <button data-prev="pro" aria-label="Profissional anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button data-next="pro" aria-label="Próximo profissional"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       APP
+  ========================================================== -->
+  <section class="section" id="app">
+    <div class="section__head reveal">
+      <p class="eyebrow">Na palma da mão</p>
+      <h2 class="section-title">O app Cortez</h2>
+      <p class="lede">Agende em 30 segundos, escolha seu barbeiro e acumule pontos a cada visita.</p>
+    </div>
+
+    <div class="app reveal">
+      <div class="app__feats">
+        <div class="app__feat">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></div>
+          <div><h4>Agendamento em segundos</h4><p>Veja horários livres em tempo real e reserve sem sair do sofá.</p></div>
+        </div>
+        <div class="app__feat">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></div>
+          <div><h4>Escolha do profissional</h4><p>Marque com o barbeiro que já conhece o seu estilo.</p></div>
+        </div>
+        <div class="app__feat">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg></div>
+          <div><h4>Programa de fidelidade</h4><p>Cada visita vira ponto. Cada ponto vira recompensa.</p></div>
+        </div>
+        <div class="app__feat">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 10-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.5 21a2 2 0 01-3 0"/></svg></div>
+          <div><h4>Lembretes automáticos</h4><p>Avisamos antes do horário. Você nunca mais esquece.</p></div>
+        </div>
+      </div>
+
+      <!-- TROCAR: link do seu app -->
+      <a class="btn btn--gold" href="#" style="display:block;margin-top:24px">Baixar o app</a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       GALERIA
+  ========================================================== -->
+  <section class="section gal" id="galeria">
+    <div class="section__head reveal">
+      <p class="eyebrow">Nosso trabalho</p>
+      <h2 class="section-title">Galeria</h2>
+      <p class="lede">O resultado que sai da cadeira.</p>
+    </div>
+    <div class="carousel reveal">
+      <div class="track" data-carousel="gal">
+        <div class="card"><div class="frame"><div class="frame__fallback"><svg viewBox="0 0 240 120" fill="#C6A15B"><path d="M118 66 L206 44 C216 41 221 47 216 54 C213 58 208 60 202 61 L120 78 Z"/></svg></div><img src="assets/img/galeria/01.jpg" alt="Salão da Cortez com a placa da barbearia na parede" loading="lazy" onerror="this.style.display='none'"></div></div>
+        <div class="card"><div class="frame"><div class="frame__fallback"><svg viewBox="0 0 240 120" fill="#C6A15B"><path d="M118 66 L206 44 C216 41 221 47 216 54 C213 58 208 60 202 61 L120 78 Z"/></svg></div><img src="assets/img/galeria/02.jpg" alt="Barbeiro com a máquina dourada em mãos" loading="lazy" onerror="this.style.display='none'"></div></div>
+        <div class="card"><div class="frame"><div class="frame__fallback"><svg viewBox="0 0 240 120" fill="#C6A15B"><path d="M118 66 L206 44 C216 41 221 47 216 54 C213 58 208 60 202 61 L120 78 Z"/></svg></div><img src="assets/img/galeria/03.jpg" alt="Atendimento na cadeira, cliente reclinado" loading="lazy" onerror="this.style.display='none'"></div></div>
+        <div class="card"><div class="frame"><div class="frame__fallback"><svg viewBox="0 0 240 120" fill="#C6A15B"><path d="M118 66 L206 44 C216 41 221 47 216 54 C213 58 208 60 202 61 L120 78 Z"/></svg></div><img src="assets/img/galeria/04.jpg" alt="Vista do salão com as cadeiras de atendimento" loading="lazy" onerror="this.style.display='none'"></div></div>
+      </div>
+      <div class="carousel__nav">
+        <div class="dots" data-dots="gal"></div>
+        <div class="arrows">
+          <button data-prev="gal" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+          <button data-next="gal" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       DEPOIMENTO
+  ========================================================== -->
+  <section class="section reveal">
+    <blockquote class="quote">
+      <div class="quote__stars" aria-label="5 de 5 estrelas">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.7 6.8L12 17.3 5.9 20.5l1.7-6.8L2.3 9.1l7-.6z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.7 6.8L12 17.3 5.9 20.5l1.7-6.8L2.3 9.1l7-.6z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.7 6.8L12 17.3 5.9 20.5l1.7-6.8L2.3 9.1l7-.6z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.7 6.8L12 17.3 5.9 20.5l1.7-6.8L2.3 9.1l7-.6z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6.5 7 .6-5.3 4.6 1.7 6.8L12 17.3 5.9 20.5l1.7-6.8L2.3 9.1l7-.6z"/></svg>
+      </div>
+      <p>Saí de lá com o melhor corte da minha vida. Mais que uma barbearia, é um ritual do começo ao fim.</p>
+      <cite>Lucas M. · Cliente</cite>
+    </blockquote>
+  </section>
+
+  <!-- =========================================================
+       LOCALIZAÇÃO E HORÁRIOS
+  ========================================================== -->
+  <section class="section" id="local">
+    <div class="section__head reveal">
+      <p class="eyebrow">Venha nos visitar</p>
+      <h2 class="section-title">Onde estamos</h2>
+    </div>
+    <div class="info reveal">
+      <div class="info__row">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        <div><h4>Endereço</h4><p>Rua Exemplo, 123 · Centro<br>Sua Cidade, UF</p></div>
+      </div>
+      <div class="info__row">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <div style="flex:1"><h4>Horários</h4>
+          <div class="hours">
+            <div><span>Segunda a sexta</span><span>09h às 20h</span></div>
+            <div><span>Sábado</span><span>09h às 18h</span></div>
+            <div><span>Domingo</span><span>Fechado</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="info__row">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 2 .7 2.9a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.4c.9.3 1.9.6 2.9.7a2 2 0 011.7 2z"/></svg></span>
+        <div><h4>Contato</h4><p>(00) 90000-0000</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       BIO LINKS
+  ========================================================== -->
+  <section class="bio" id="bio">
+    <div class="section__head reveal">
+      <p class="eyebrow">Todos os links</p>
+      <h2 class="section-title">Fale com a Cortez</h2>
+    </div>
+    <nav class="bio__links reveal">
+      <!-- TROCAR: falta o link do WhatsApp e o do mapa -->
+      <a class="bio__link" href="https://www.instagram.com/cortezz.barbearia/" target="_blank" rel="noopener">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        <span class="tx">Instagram <small>@cortezz.barbearia</small></span>
+        <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="bio__link" href="#">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.4 8.4 0 01-11.9 7.6L3 21l1.9-6A8.4 8.4 0 1121 11.5z"/></svg></span>
+        <span class="tx">WhatsApp <small>Agende ou tire dúvidas</small></span>
+        <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="bio__link" href="#app">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></span>
+        <span class="tx">Baixar o app <small>App Store e Google Play</small></span>
+        <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="bio__link" href="#">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+        <span class="tx">Como chegar <small>Abrir no mapa</small></span>
+        <span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </nav>
+
+    <footer class="foot reveal">
+      <div class="foot__mark">
+        <svg viewBox="0 0 420 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M300 104 L108 62" stroke="#C6A15B" stroke-width="26" stroke-linecap="round"/>
+          <path d="M300 118 L96 146" stroke="#C6A15B" stroke-width="22" stroke-linecap="round"/>
+          <circle cx="116" cy="143" r="5.5" fill="#0B0B0C"/>
+          <path d="M300 111 C332 108 350 118 350 132 C350 141 344 145 337 143" stroke="#C6A15B" stroke-width="11" stroke-linecap="round"/>
+          <circle cx="300" cy="111" r="11" fill="#C6A15B"/>
+          <circle cx="300" cy="111" r="4" fill="#0B0B0C"/>
+        </svg>
+      </div>
+      <div class="foot__word">CORTEZ</div>
+      <small>Barbearia · Corte, barba e ritual<br>© 2026 Cortez Barbearia. Todos os direitos reservados.</small>
+    </footer>
+  </section>
+
+</main>
+
+<!-- COMPORTAMENTOS — ver assets/js/main.js -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>

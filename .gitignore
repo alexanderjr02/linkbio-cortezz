@@ -1,0 +1,16 @@
+# Sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Logs e temporários
+*.log
+.cache/
+
+# Material bruto (masters de vídeo/foto). Não faz parte do site publicado.
+_fonte/

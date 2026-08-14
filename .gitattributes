@@ -1,0 +1,14 @@
+# Normaliza finais de linha: LF no repositório, nativo no working copy.
+# Sem isso, editar num sistema diferente vira diff do arquivo inteiro.
+* text=auto
+
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.svg  text eol=lf
+*.md   text eol=lf
+
+*.jpg  binary
+*.png  binary
+*.mp4  binary
+*.webm binary
